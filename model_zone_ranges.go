@@ -9,5 +9,4 @@
 
 package strava
 
-type ZoneRanges struct {
-}
+type ZoneRanges []ZoneRange
