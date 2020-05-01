@@ -27,6 +27,7 @@ pipeline{
                     steps {
                         script{
                                 sh """go get github.com/antihax/optional"""
+                                sh """go get golang.org/x/oauth2"""
                                 sh """go vet ./..."""
 
                                 def checkVet = scanForIssues tool: [$class: 'GoVet']
