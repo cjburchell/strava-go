@@ -612,8 +612,8 @@ Returns the activities of an athlete for a specific identifier. Requires activit
 */
 
 type GetLoggedInAthleteActivitiesOpts struct {
-	Before  optional.Int32
-	After   optional.Int32
+	Before  optional.Int64
+	After   optional.Int64
 	Page    optional.Int32
 	PerPage optional.Int32
 }
