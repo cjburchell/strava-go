@@ -19,13 +19,13 @@ go-vet:
     - go fmt $(go list ./... | grep -v /vendor/)
     - go vet $(go list ./... | grep -v /vendor/)
 
-go-lint:
-  stage: style
-  before_script:
-    - go get -u golang.org/x/lint/golint/...
-  script:
-    - out=$(golint $(go list ./... | grep -v "vendor"))
-    - if [ "$out" ]; then echo "$out"; exit 1; fi
+#go-lint:
+#  stage: style
+#  before_script:
+#    - go get -u golang.org/x/lint/golint/...
+#  script:
+#    - out=$(golint $(go list ./... | grep -v "vendor"))
+#    - if [ "$out" ]; then echo "$out"; exit 1; fi
 
 include:
   - template: Security/License-Scanning.gitlab-ci.yml
